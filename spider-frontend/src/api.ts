@@ -1,8 +1,17 @@
 import { IChatRoom, IMessage } from "./types";
 import axios from "axios";
 
+const apiBaseURL =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+    ? "http://127.0.0.1:8000/api/v1/"
+    : `http://${window.location.hostname}:8000/api/v1/`;
+
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/v1/",
+  baseURL: apiBaseURL,
+  headers: {
+    "Content-type": "application/json",
+  },
   withCredentials: true,
 });
 

@@ -1,0 +1,32 @@
+version: "3"
+services:
+  # 프론트엔드 서비스
+  spider-frontend:
+    build: ./spider-frontend
+    container_name: spider-frontend
+    ports:
+      - "80:80"
+
+  # 백엔드 서비스
+  spider-backend:
+    build: ./spider-backend
+    container_name: spider-backend
+    environment:
+      - HOST=your_domain_or_ip
+      - DB_NAME=spider
+      - DB_USER=your_db_user
+      - DB_PASSWORD=your_db_password
+      - DB_PORT=your_db_port
+      - DB_HOST=your_db_host
+      - MILVUS_PORT=your_milvus_port
+      - MILVUS_HOST=your_milvus_host
+      - OPENAI_API_KEY=your_openai_api_key
+      - TAVILY_API_KEY=your_tavily_api_key
+      - REDIS_PORT=your_redis_port
+      - REDIS_HOST=your_redis_host
+    ports:
+      - "8000:8000"
+
+networks:
+  default:
+    name: spider-network

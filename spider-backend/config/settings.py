@@ -32,7 +32,7 @@ SECRET_KEY = "django-insecure-ue)sw0o*%d@-9t*(0830^rpe)hoi(+2wamw)@j9o3lx4#-@9+h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", env("HOST")]
 
 # Application definition
 
@@ -61,6 +61,7 @@ THIRD_PARTY_APPS = [
 INSTALLED_APPS = SYSTEM_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -68,7 +69,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -171,4 +171,9 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 
 CORS_ALLOW_CREDENTIALS = True
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3001"]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:80",
+    "http://127.0.0.1:80",
+    f"http://{env('HOST')}:80",
+]
+CORS_ALLOW_CREDENTIALS = True
