@@ -1,4 +1,44 @@
-# Getting Started with Create React App
+<h1 align="center">🖥️ SPIDER-RAG Frontend 🖥️</h1>
+
+## 📜 목차
+
+- [개요](#📌-개요)
+- [프로젝트 구조](#📌-프로젝트-구조)
+- [실행방법 및 테스트](#📌-실행방법-및-테스트)
+
+## 📌 개요
+
+이 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)을 사용하여 만들어졌습니다.
+
+### 1. 상세
+
+이 프로젝트는 [Create React App](https://github.com/facebook/create-react-app)을 사용하여 만들어졌습니다.
+
+### 2. 주요 버전 정보
+
+- `node`: 22
+- `chakra-ui`: 2.10.2
+- `tanstack`: 5.59.12
+- `react`: 18.3.1
+- `typescript`: 4.9.5
+
+## 📌 프로젝트 구조
+
+```
+├── public
+├── src
+│   ├── components
+│       ├── modules
+│       ├── shared
+│       ├── routes
+│       └── screens
+```
+
+- `modules`: 채팅방, 메세지
+- `routes`: 메인 화면 라우팅
+- `screens`: 채팅방 상세, 메세지 리스트
+
+## 📌 실행방법 및 테스트
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

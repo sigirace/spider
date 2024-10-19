@@ -15,7 +15,7 @@
 
 `Backend` 구성은 python 기반의 django framework을 사용했으며 llm 인터페이스를 위해 langchain framework를 사용하였습니다. Langchain 래퍼는 대화형 애플리케이션을 구축하기 위해 `ChatOpenAI`를 사용하였고, `Document Embedding`을 위해서는 `OpenAIEmbeddings`를 통해 문서를 임베딩화 시켰습니다.
 
-### 2. 주요 정보
+### 2. 주요 버전 정보
 
 - `python`: 3.11.3
 - `django`: 5.1.2
