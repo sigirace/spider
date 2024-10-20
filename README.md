@@ -76,7 +76,7 @@
 전체 시스템은 Oracle Cloud의 Instance에서 3가지 영역으로 크게 나뉘어 있습니다.
 <br>
 
-첫 번째로 `Code Area`입니다. Local에서 기능 구현을 위해 frontend/ backend 코드를 작성하고, github를 통해 코드를 pull 합니다.
+첫 번째로 `Code Area`입니다. Local에서 기능 구현을 위해 frontend/ backend 코드를 작성하고, 해당 영역에서 github를 통해 코드를 pull 합니다.
 <br>
 
 두 번째는 `Dev Area`입니다. 이곳에서는 작성한 Code가 실제로 잘 동작하는지 테스트를 수행합니다. 웹 서버와 애플리케이션 서버는 사용하지 않으며 단순히 임시 서버를 구동하는 개발 모드로 실행됩니다. 이때 생성한 DB는 실제 서비스와 분리하여 구성합니다. 테스트는 기능 확인 및 각 서버간의 통신 여부를 확인합니다.
